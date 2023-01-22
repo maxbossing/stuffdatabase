@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Github-Repos.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="github-repos">Github Repos</h1>
+<p>List of github repos hosting stuff</p>
+<hr>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><a href="https://github.com/bettercap/bettercap">bettercap</a> - The Swiss Army knife for 802.11, BLE, IPv4 and IPv6 networks reconnaissance and MITM attacks. - Custom License - Go</li>
+<li><a href="https://github.com/paolostivanin/OTPClient">OTPClient</a> - Highly secure and easy to use OTP client written in C/GTK3 that supports both TOTP and HOTP  - GPL v3.0 - C</li>
+<li><a href="https://github.com/carbon-app/carbon">carbon</a> - Create and share beautiful images of your source code - MIT License - javascript</li>
+<li><a href="https://github.com/ProgrammersOfVilnius/pov-check-health">pov-check-health</a> - Debian package that runs basic system health monitoring checks hourly from cron  - No License - Shell</li>
+<li><a href="https://github.com/stark/Color-Scripts">Color-Scripts</a> - User contributed color scripts - No License - Shell</li>
+<li><a href="https://github.com/Tmpertor/Raven-Storm">Raven-Storm</a> - Raven-Storm is a powerful DDoS toolkit for penetration tests, including attacks for several protocols written in python. Takedown many connections using several exotic and classic protocols. - Custom License - Python</li>
+<li><a href="https://github.com/DMNh/Underwatch">Underwatch</a> - Underwatch is a utility for tracking changes to the ini and save files for Undertale. - Unlicense License - Python</li>
+<li><a href="https://github.com/robertdavidgraham/masscan">masscan</a> - TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes. - Custom License - C</li>
+<li><a href="https://github.com/H4ckd4ddy/flipperzero-sentry-safe-plugin">flipperzero-sentry-safe-plugin</a> - No description - MIT License - C</li>
+<li><a href="https://github.com/p4nic4ttack/doom-flipper-zero">doom-flipper-zero</a> - Doom flipper zero edition - No License</li>
+<li><a href="https://github.com/hashPirate/copenheimer-masscan-fork">copenheimer-masscan-fork</a> - a repository hosting the copenheimer project - Custom License</li>
+<li><a href="https://github.com/aircrack-ng/aircrack-ng">aircrack-ng</a> - WiFi security auditing tools suite - GPL v2.0/ Custom License - C</li>
+<li><a href="https://github.com/zmap/zmap">zmap</a> - ZMap is a fast single packet network scanner designed for Internet-wide network surveys. - Apache 2.0 - C</li>
+<li><a href="https://github.com/evilsocket/xray">xray</a> - XRay is a tool for recon, mapping and OSINT gathering from public networks. - Go</li>
+<li><a href="https://github.com/FuzzySecurity/PowerShell-Suite">powershell-suite</a> - My musings with PowerShell - BSD-3-Clause License - Powershell</li>
+<li><a href="https://github.com/TigerHix/Hex-Utils">Hex-Utils</a> - Parts of utils in Hex Framework, a minigame framework I made. - No License - Java</li>
+<li><a href="https://github.com/takeshixx/redstar-tools">redstar-tools</a> - Tools for Red Star OS (붉은별) - No License - Shell</li>
+<li><a href="https://github.com/SerenityOS/ladybird">ladybird</a> - The Ladybird web browser - BSD-2-Clause - C++</li>
+<li><a href="https://github.com/lambda-client/lambda">lambda</a> - Minecraft utility mod coded in Kotlin - LGPL v2.0 - Kotlin</li>
+<li><a href="https://github.com/warpdotdev/Warp">warp</a> -  Warp is a blazingly-fast modern Rust based GPU-accelerated terminal built to make you and your team more productive. - Custom License</li>
+<li><a href="https://github.com/victornpb/undiscord">undiscord</a> - Undiscord - Delete all messages in a Discord server / channel or DM (Easy and fast) Bulk delete  - MIT License - javascript</li>
+<li><a href="https://github.com/R4yGM/stegbrute">stegbrute</a> - Fast Steganography bruteforce tool written in Rust useful for CTF's  - Apache 2.0 - Rust</li>
+<li><a href="https://github.com/7thSamurai/steganography">steganography</a> -  Simple C++ Image Steganography tool to encrypt and hide files insde images using Least-Significant-Bit encoding. - MIT License - C++</li>
+<li><a href="https://github.com/downingstreet/BitchX1.2">BitchX1.2</a> - BitchX IRC Client - No License - C</li>
+<li><a href="https://github.com/Puyodead1/udemy-downloader">udemy-downloader</a> - An Udemy downloader that can download lectures, with DRM support. - MIT License</li>
+<li><a href="https://github.com/TheOfficialFloW/NoNpDrm">NoNPDRM</a> - A plugin that allows you to bypass DRM protection on any PS Vita content  - GPL v3.0 - C</li>
+<li><a href="https://github.com/T3rry7f/NoDRM">NoDRM</a> - NoDRM - No License - C</li>
+<li><a href="https://github.com/ventoy/Ventoy">Ventoy</a> - A new bootable USB solution. - GPL v3.0 - C</li>
+<li><a href="https://github.com/basti564/MNSPlusTrasher">MNSPlusTrasher</a> - The first MNS+ specific &quot;hacktool&quot; - GPL v3.0 - Visual Basic .NET</li>
+</ul>
+<hr>
+<h2 id="os">OS</h2>
+<ul>
+<li><a href="https://github.com/DuckOS-GitHub/DuckOS">DuckOS</a> - An open modification of Windows, designed to reduce latency and increase performance. 🚀 ⚡ 🦆 - GPL v3.0 - Batchfile</li>
+<li><a href="https://github.com/Atlas-OS/Atlas">Atlas-OS</a> - 🚀 An open-source modification of Windows 10, designed to optimize performance, and latency.  - No License - Batchfile</li>
+<li><a href="https://github.com/DarkFlippers/unleashed-firmware">unleashed-firmware</a> -  Flipper Zero Unleashed Firmware  - GPL v3.0 - C</li>
+<li><a href="https://github.com/reactos/reactos">reactos</a> - A free Windows-compatible Operating System  - GPL v2.0/Other - C</li>
+<li><a href="https://github.com/SerenityOS/serenity">serenity-os</a> - The Serenity Operating System 🐞 - BSD-2-Clause - C++</li>
+</ul>
+<hr>
+<h2 id="libraries">Libraries</h2>
+<ul>
+<li><a href="https://github.com/JitseB/NPCLib">NPCLib</a> - (Minecraft) NPCLib – Basic non-player character library. - MIT License - Java</li>
+<li><a href="https://github.com/WesJD/AnvilGUI">AnvilGUI</a> - AnvilGUI is a library to capture user input in Minecraft through an anvil inventory - MIT License - Java</li>
+<li><a href="https://github.com/dmulloy2/ProtocolLib">ProtocolLib</a> - Provides read and write access to the Minecraft protocol with Bukkit. - GPL v2.0 - Java</li>
+<li><a href="https://github.com/hoot-w00t/python-papermc">Python-Papermc</a> -  Python wrapper for the <a href="https://papermc.io">PaperMC</a> Downloads API  - MIT License - Python</li>
+<li><a href="https://github.com/peakwinter/python-pacman">python-pacman</a> - Simple Python interface to Arch Linux package manager (pacman) - GPL v3.0 - Python</li>
+</ul>
+<hr>
+<h2 id="educational-sources">Educational Sources</h2>
+<ul>
+<li><a href="https://github.com/xcellerator/linux_kernel_hacking">linux_kernel_hacking</a> - Linux Kernel Hacking - GPL v2.0 - C</li>
+<li><a href="https://github.com/EbookFoundation/free-programming-books">Free-Programming-books</a> - 📖 Freely available programming books - Custom License</li>
+<li><a href="https://github.com/EbookFoundation/free-science-books">Free-Science-Books</a> - Inspired by free-programming-books, here's free-science-books - CC0-1.0 License</li>
+<li><a href="https://github.com/danielmiessler/SecLists">SecList</a> - SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more. - MIT License - PHP</li>
+</ul>
+<hr>
+<h2 id="variety">Variety</h2>
+<ul>
+<li><a href="https://github.com/unxsh/qpwm">qpwm</a> - quite powerful window manager for X 🦾 - GPL v3.0 - C</li>
+<li><a href="https://github.com/evilsocket/pwnagotchi">pwnagotchi</a> - (⌐■_■) - Deep Reinforcement Learning instrumenting bettercap for WiFi pwning. - Custom License - javascript/python</li>
+<li><a href="https://github.com/PurpurMC/Purpur">PurpurMC</a> - Purpur is a drop-in replacement for Paper servers designed for configurability, and new fun and exciting gameplay features - MIT License - Kotlin/Shell</li>
+<li><a href="https://github.com/MultiPaper/MultiPaper">MultiPaper</a> - Multi-server, single-world papermc implementation  - GPL v3.0 - Java</li>
+<li><a href="https://github.com/chrislgarry/Apollo-11">Apollo-11</a> - Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules. - Custom License - Assembly</li>
+<li><a href="https://github.com/chris2rich/PopbobPoisonedPlugin">PopBobPoisonedPlugin</a> - source code for popbobs plugin for hausemaster for use on 2b2t that happened to give certain players elevated privileges - Unlicense License - Java</li>
+<li><a href="https://github.com/jgamblin/Mirai-Source-Code">Mirai Source Code</a> - Leaked Mirai Source Code for Research/IoC Development Purposes - GPL v3.0 - C</li>
+<li><a href="https://github.com/Endermanch/MalwareDatabase">MalwareDatabase</a> - This repository is one of a few malware collections on the GitHub. - No License - Python</li>
+</ul>
+<hr>
+<h2 id="languages">Languages</h2>
+<ul>
+<li><a href="https://github.com/munificent/vigil">vigil</a> - Vigil, the eternal morally vigilant programming language - No License - Python</li>
+<li><a href="https://github.com/nim-lang/Nim">nim</a> - Nim is a statically typed compiled systems programming language. It combines successful concepts from mature languages like Python, Ada and Modula. Its design focuses on efficiency, expressiveness, and elegance (in that order of priority).  - Custom License - Nim</li>
+<li><a href="https://github.com/SerenityOS/jakt">jakt</a> - The Jakt Programming Language - BSD-2-Clause License - C++</li>
+</ul>
+
+</body>
+</html>
